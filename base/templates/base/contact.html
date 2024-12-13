@@ -1,0 +1,26 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'base/bootstrap.min.css' %}">
+
+
+<div class="container">
+    <h2 class="h1">Send me a message</h2>
+    <form class="form-group" method="POST" action="">
+        {% csrf_token %}
+
+        
+
+        {{ form|crispy }}
+        
+        <!-- <div class="form-group">
+          
+            {{ form|crispy }}
+
+        </div> -->
+
+        <!-- <button type="reset" class="btn btn secondary">Reset</button> -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+    </form>
+</div>
